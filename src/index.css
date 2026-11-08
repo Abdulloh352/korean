@@ -1,0 +1,87 @@
+@import "tailwindcss";
+
+@theme {
+  --font-display: "Cormorant Garamond", Georgia, serif;
+  --font-sans: "Outfit", "Segoe UI", sans-serif;
+  --font-kr: "Noto Sans KR", "Malgun Gothic", sans-serif;
+
+  --color-ink: #2a2235;
+  --color-ink-soft: #5a4d66;
+  --color-plum: #6b4a8a;
+  --color-plum-deep: #533672;
+  --color-lilac: #b89ad4;
+  --color-lavender: #efe7fb;
+  --color-blush: #f7dce8;
+  --color-rose: #e8a8c0;
+  --color-cream: #fffafc;
+  --color-petal: #ffd6e6;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+section[id] {
+  scroll-margin-top: 6.5rem;
+}
+
+body {
+  margin: 0;
+  color: var(--color-ink);
+  background: var(--color-cream);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+}
+
+::selection {
+  background: #f3c9db;
+  color: var(--color-ink);
+}
+
+.font-display {
+  font-family: var(--font-display);
+}
+
+.font-kr {
+  font-family: var(--font-kr);
+}
+
+.mesh-bg {
+  background:
+    radial-gradient(900px 500px at 8% -10%, rgba(247, 220, 232, 0.9), transparent 55%),
+    radial-gradient(700px 420px at 92% 8%, rgba(184, 154, 212, 0.28), transparent 50%),
+    radial-gradient(600px 400px at 50% 100%, rgba(239, 231, 251, 0.8), transparent 55%),
+    #fffafc;
+}
+
+.glass {
+  background: rgba(255, 250, 252, 0.72);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+}
+
+.soft-shadow {
+  box-shadow:
+    0 18px 50px -24px rgba(107, 74, 138, 0.35),
+    0 8px 20px -16px rgba(232, 168, 192, 0.5);
+}
+
+.input-field {
+  width: 100%;
+  border-radius: 1rem;
+  border: 1px solid rgba(184, 154, 212, 0.35);
+  background: rgba(255, 255, 255, 0.85);
+  padding: 0.85rem 1rem;
+  color: var(--color-ink);
+  outline: none;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.input-field:focus {
+  border-color: #b89ad4;
+  box-shadow: 0 0 0 4px rgba(184, 154, 212, 0.18);
+}
+
+.input-field::placeholder {
+  color: #9a8ba8;
+}
